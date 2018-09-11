@@ -216,7 +216,7 @@ const createList = (availableItems) => {
 const fizzbuzz = (arr) => {
   
   let rt = [];
-  arr.forEach(function(element, index, array)
+  arr.forEach(function(element)
   {
     if ((element%3 === 0) && (element%5 === 0))
     {
