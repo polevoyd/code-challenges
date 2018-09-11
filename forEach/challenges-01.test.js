@@ -140,8 +140,12 @@ const removeElements = (input, removeOne) => {
 // Write a function named removeWithForEach that produces the same output as challenge 6, but uses forEach.
 // ------------------------------------------------------------------------------------------------
 
-const removeWithForEach = (input, callback) => {
-  // Solution code here...
+const removeWithForEach = (input, removeOne) => {
+  input.forEach(function(element, index, array)
+  {
+    removeOne(element, array);
+  });
+  return input;
 };
 
 // ------------------------------------------------------------------------------------------------
