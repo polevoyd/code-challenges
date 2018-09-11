@@ -90,11 +90,17 @@ const speaker = (message, greeting) => greeting(message);
 // ------------------------------------------------------------------------------------------------
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+const addNumbers = (num, arr, times, addValues) => {
+  let modifiedArray = arr;
+
+  for (let i=0; i < times; i++)
+  {
+    addValues(modifiedArray, num);
+  }
+  return modifiedArray;
 };
 
 // ------------------------------------------------------------------------------------------------
