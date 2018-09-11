@@ -160,7 +160,11 @@ const removeWithForEach = (input, removeOne) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeWithAnon = (input) => {
-  // Solution code here...
+  input.forEach(function(element, index, array)
+  {
+    removeOne(element,array);
+  });
+  return input;
 };
 
 // ------------------------------------------------------------------------------------------------
