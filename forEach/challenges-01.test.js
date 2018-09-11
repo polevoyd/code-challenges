@@ -68,13 +68,9 @@ const addCurve = (arr) => {
 // The speaker function should return the string in all uppercase letters only by invoking the callback.
 // ------------------------------------------------------------------------------------------------
 
-const greeting = (word) => {
-  // Solution code here...
-};
+const greeting = (word) => word.toUpperCase();
 
-const speaker = (message, callback) => {
-  // Solution code here...
-};
+const speaker = (message, greeting) => greeting(message);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
