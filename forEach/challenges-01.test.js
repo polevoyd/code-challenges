@@ -118,11 +118,20 @@ const addNumbers = (num, arr, times, addValues) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeOne = (num, input) => {
-  // Solution code here...
+  if (num%3 === 2)
+  {
+    input.pop();
+  }
 };
 
-const removeElements = (input, callback) => {
-  // Solution code here...
+const removeElements = (input, removeOne) => {
+
+  let modifiedArray = input;
+  for (let element of modifiedArray)
+  {
+    removeOne(element, modifiedArray);
+  }
+  return modifiedArray;
 };
 
 // ------------------------------------------------------------------------------------------------
