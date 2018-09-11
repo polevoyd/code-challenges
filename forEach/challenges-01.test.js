@@ -187,7 +187,7 @@ const removeWithAnon = (input) => {
 
 
 const createList = (availableItems) => {
-    
+
   let groceryList = [];
   availableItems.forEach(function(element)
   {
@@ -214,7 +214,7 @@ const createList = (availableItems) => {
 // ------------------------------------------------------------------------------------------------
 
 const fizzbuzz = (arr) => {
-  
+ 
   let rt = [];
   arr.forEach(function(element)
   {
