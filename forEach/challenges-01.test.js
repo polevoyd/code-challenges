@@ -186,7 +186,16 @@ const removeWithAnon = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const createList = (availableItems) => {
-  // Solution code here...
+    
+  let groceryList = [];
+  availableItems.forEach(function(element, index, array)
+  {
+    if (element.available === true)
+    {
+      groceryList.push(element.name);
+    }
+  });
+  return groceryList;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -204,7 +213,28 @@ const createList = (availableItems) => {
 // ------------------------------------------------------------------------------------------------
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  
+  let rt = [];
+  arr.forEach(function(element, index, array)
+  {
+    if ((element%3 === 0) && (element%5 === 0))
+    {
+      rt.push('Fizz Buzz');
+    }
+    else if (element%3 === 0)
+    {
+      rt.push('Fizz');
+    }
+    else if (element%5 === 0)
+    {
+      rt.push('Buzz');
+    }
+    else
+    {
+      rt.push(element);
+    }
+  });
+  return rt;
 };
 
 // ------------------------------------------------------------------------------------------------
