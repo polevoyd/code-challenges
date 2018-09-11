@@ -188,7 +188,7 @@ const removeWithAnon = (input) => {
 const createList = (availableItems) => {
     
   let groceryList = [];
-  availableItems.forEach(function(element, index, array)
+  availableItems.forEach(function(element)
   {
     if (element.available === true)
     {
