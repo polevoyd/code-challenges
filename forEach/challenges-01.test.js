@@ -185,6 +185,7 @@ const removeWithAnon = (input) => {
 // If the item is available, add it to your list. Return the final list.
 // ------------------------------------------------------------------------------------------------
 
+
 const createList = (availableItems) => {
     
   let groceryList = [];
