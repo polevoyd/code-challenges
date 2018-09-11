@@ -30,7 +30,7 @@ const pushIntoSecond = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addBonusPoints = (arr) => {
-  
+
   let rt = [];
   for (let e of arr)
   {
@@ -50,8 +50,14 @@ const addBonusPoints = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addCurve = (arr) => {
-  // Solution code here...
-}
+
+  let rt = [];
+  for (let i in arr)
+  {
+    rt.push(arr[i] + arr[i]*0.05);
+  }
+  return rt;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -64,11 +70,11 @@ const addCurve = (arr) => {
 
 const greeting = (word) => {
   // Solution code here...
-}
+};
 
 const speaker = (message, callback) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -89,11 +95,11 @@ const speaker = (message, callback) => {
 
 const addValues = (arr, value) => {
   // Solution code here...
-}
+};
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -111,11 +117,11 @@ const addNumbers = (num, arr, times, callback) => {
 
 const removeOne = (num, input) => {
   // Solution code here...
-}
+};
 
 const removeElements = (input, callback) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -125,7 +131,7 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
@@ -140,7 +146,7 @@ const removeWithForEach = (input, callback) => {
 
 const removeWithAnon = (input) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
@@ -162,7 +168,7 @@ const removeWithAnon = (input) => {
 
 const createList = (availableItems) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
@@ -180,7 +186,7 @@ const createList = (availableItems) => {
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
