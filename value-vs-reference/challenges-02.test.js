@@ -31,7 +31,8 @@ const appendTheEnd = (str) => {
 
 const appendFirstToLast = (list) => {
   // Solution code here...
-}
+  list.push(list[0]);
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
