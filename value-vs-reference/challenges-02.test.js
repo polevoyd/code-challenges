@@ -51,7 +51,8 @@ const appendFirstToLast = (list) => {
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
-}
+  obj.yearBorn = year;
+};
 
 
 
