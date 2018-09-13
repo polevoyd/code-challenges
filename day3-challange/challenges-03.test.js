@@ -142,11 +142,22 @@ const errands = [
   { store: 'Pet store',
     items: [ { name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 } ]
   }
-]
+];
 
 const howManyTreats = (arr) => {
   // Solution code here...
-}
+
+  for (let storeVisit of arr)
+  {
+    for (let properties of storeVisit.items)
+    {
+      if (properties.name === 'Treats')
+      {
+        return properties.quantity;
+      }
+    }
+  }
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -168,7 +179,15 @@ const howManyTreats = (arr) => {
 
 const battleship = (board, row, col) => {
   //  Solution code here...
-}
+  if (board[row][col] !== ' ')
+  {
+    return 'hit';
+  }
+  else
+  {
+    return 'miss';
+  }
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -182,7 +201,17 @@ const battleship = (board, row, col) => {
 
 const calculateProduct = (numbers) => {
   // Solution code here...
-}
+
+  let product = 1;
+  for (let i of numbers)
+  {
+    for (let k of i)
+    {
+      product *= k;
+    }
+  }
+  return product;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
