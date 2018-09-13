@@ -232,7 +232,19 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
-}
+  let amountOfDays = 0;
+  let totalTemp = 0;
+  
+  for (let week of weather)
+  {
+    for (let day of week)
+    {
+      totalTemp += day;
+      amountOfDays++;
+    }
+  }
+  return totalTemp / amountOfDays;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
