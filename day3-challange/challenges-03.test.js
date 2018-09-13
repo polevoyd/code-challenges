@@ -266,7 +266,24 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
-}
+  let lowestTemp = 10000;
+  for (let week of weather)
+  {
+    let weeklyTemp = 0;
+    
+    for (let day of week)
+    {
+      weeklyTemp += day;
+    }
+
+    let weeklyAverage = weeklyTemp / 7;
+    if (weeklyAverage < lowestTemp)
+    {
+      lowestTemp = weeklyAverage;
+    }
+  }
+  return lowestTemp;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
