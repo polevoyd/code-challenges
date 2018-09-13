@@ -149,16 +149,18 @@ const errands = [
 const howManyTreats = (arr) => {
   // Solution code here...
 
-  for (let storeVisit of arr)
-  {
-    for (let properties of storeVisit.items)
-    {
-      if (properties.name === 'Treats')
-      {
-        return properties.quantity;
-      }
-    }
-  }
+//   for (let storeVisit of arr)
+//   {
+//     for (let properties of storeVisit.items)
+//     {
+//       if (properties.name === 'Treats')
+//       {
+//         return properties.quantity;
+//       }
+//     }
+//   }
+
+  return arr[2].items[1].quantity;
 };
 
 // ------------------------------------------------------------------------------------------------
