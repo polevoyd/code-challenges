@@ -71,7 +71,7 @@ const citiesAtoJ = (cities) => {
 
 const matchMonth = (input) => {
   // Solution code here...
-  
+//   return input.contains('oct') || input.contains('Oct');
 };
 
 // ------------------------------------------------------------------------------------------------
