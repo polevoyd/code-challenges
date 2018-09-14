@@ -90,6 +90,8 @@ const matchMonth = (input) => {
 
 const noPunctuation = input => {
   // Solution code here...
+  let arr = input.match(/[a-zA-Z]+\s\b/g);
+  return arr;
 };
 
 // ------------------------------------------------------------------------------------------------
