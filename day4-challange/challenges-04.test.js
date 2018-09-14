@@ -16,7 +16,11 @@
 
 const isNum = (num) => {
   // Solution code here...
-  return /\d/.test(num);
+
+  if (typeof(num) === "number")
+    return true;
+  else
+    return num.match(/\d/) ? true : false;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -42,6 +46,8 @@ const isCapitalized = (string) => {
 
 const citiesAtoJ = (cities) => {
   // Solution code here...
+//   let temp = cities.match(/[A-J]\w*\b/g);
+  return temp;
 };
 
 // ------------------------------------------------------------------------------------------------
