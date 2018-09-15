@@ -108,9 +108,10 @@ const listFoods = (recipe) => {
   // Solution code here...
   recipe.ingredients.forEach(function(element, index, array)
   {
-    let tempArr = element.match(/\s\S/g);
-    let temp = element.slice(element.indexOf(element.match(/\s\S/g)[tempArr.length-1]));
-    result.push(temp);
+    let temp = element.slice(element.indexOf(' ')+1);
+    let temp2 = temp.slice(temp.indexOf(' ')+1);
+    //   let temp = element.slice(element.indexOf(element.match(/\s\S/g)[1]));
+    result.push(temp2);
   });
   return result;
 };
