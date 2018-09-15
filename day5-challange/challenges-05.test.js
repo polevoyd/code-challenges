@@ -41,12 +41,19 @@ const wordsToCharList = (arr) => {
 /*------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
+Write a function named totalSumCSV that, given a string of 
+comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total 
+sum of the numeric values (e.g. 6).
 ------------------------------------------------------------------------*/
 
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
+  let arr = str.split(',');
+  for (let i of arr)
+  {
+    total += parseInt(i);
+  }
   return total;
 };
 
