@@ -109,6 +109,7 @@ const noPunctuation = input => {
 
 let hangman = (str) => {
   // Solution code here...
+  return str.replace(/[aeiou]/g, '_');
 };
 
 // ------------------------------------------------------------------------------------------------
