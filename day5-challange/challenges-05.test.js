@@ -130,26 +130,13 @@ const splitFoods = (recipe) => {
   recipe.ingredients.forEach(function(element, index, array)
   {
     let arr = element.split(' ');
-
-
+    let tempStr = '';
     for (let i = 2; i < arr.length; i++)
     {
-      let tempString = '';
-      if (i !== arr.length-1)
-      {
-        tempString += arr[i];
-        tempString += ' ';
-      }
-      else
-      {
-        tempString += arr[i];
-      }
-      
-      result.push(tempString);
+      tempStr += arr[i] + ' '; 
     }
-
+    result.push(tempStr.substr(0, tempStr.length-1));
   });
-  // Solution code here...
   return result;
 };
 
