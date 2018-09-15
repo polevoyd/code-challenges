@@ -145,9 +145,11 @@ CHALLENGE 6
 
 Use the same recipe from Challenge 4, above.
 
-Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
+Write a function named stepAction that takes in the recipe and extracts the action verbs 
+from the steps. Fortunate for you, the action verbs are the first word of each action.
 
-Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
+Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] 
+returns ['Mix'].
 
 Use the split method for this function.
 ------------------------------------------------------------------------*/
@@ -155,6 +157,11 @@ Use the split method for this function.
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.steps.forEach(function(element, index, array)
+  {
+    let action = element.split(' ')[0];
+    result.push(action);
+  });
   return result;
 };
 
