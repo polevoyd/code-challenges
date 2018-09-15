@@ -27,7 +27,7 @@ const howMuchPencil = (str) => {
 /*------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function name wordsToCharList that, given a string as input, 
+Write a function name wordsToCharList that, given a string as input,
 returns a new array where every element is a character of the input string.
 
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
@@ -41,8 +41,8 @@ const wordsToCharList = (arr) => {
 /*------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named totalSumCSV that, given a string of 
-comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total 
+Write a function named totalSumCSV that, given a string of
+comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total
 sum of the numeric values (e.g. 6).
 ------------------------------------------------------------------------*/
 
@@ -60,15 +60,15 @@ const totalSumCSV = (str) => {
 /*------------------------------------------------------------------------
 CHALLENGE 4
 
-You are making a grocery list for ingredients needed in the gruffalo crumble 
-recipe, below. Rather than taking the entire recipe, you only want a list of 
+You are making a grocery list for ingredients needed in the gruffalo crumble
+recipe, below. Rather than taking the entire recipe, you only want a list of
 the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new 
-array of the food items without any amount or units. Just the name. For 
+Write a function named listFoods that takes in the recipe and returns a new
+array of the food items without any amount or units. Just the name. For
 example, '1 cup flour' will return 'flour'.
 
-DO USE slice for this function, maybe more than once. The Array.indexOf() 
+DO USE slice for this function, maybe more than once. The Array.indexOf()
 method may also be helpful.
 
 DO NOT USE split for this function.
@@ -133,7 +133,7 @@ const splitFoods = (recipe) => {
     let tempStr = '';
     for (let i = 2; i < arr.length; i++)
     {
-      tempStr += arr[i] + ' '; 
+      tempStr += arr[i] + ' ';
     }
     result.push(tempStr.substr(0, tempStr.length-1));
   });
@@ -145,10 +145,10 @@ CHALLENGE 6
 
 Use the same recipe from Challenge 4, above.
 
-Write a function named stepAction that takes in the recipe and extracts the action verbs 
+Write a function named stepAction that takes in the recipe and extracts the action verbs
 from the steps. Fortunate for you, the action verbs are the first word of each action.
 
-Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] 
+Return a new array containing just the verbs. For example, ['Mix until evenly distributed']
 returns ['Mix'].
 
 Use the split method for this function.
@@ -168,7 +168,8 @@ const stepActions = (recipe) => {
 /*------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array, leaving no 'gaps' behind.
+Write a function named removeEvenValues that, given an array of integers as input,
+deletes all even values from the array, leaving no 'gaps' behind.
 
 The array should be modified in-place.
 
@@ -179,7 +180,22 @@ For example:
 ------------------------------------------------------------------------*/
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+
+  arr.forEach(function(element, index, array)
+  {
+    if (element % 2 === 0)
+    {
+      array.splice(index,1);
+    }
+  });
+
+  arr.forEach(function(element, index, array)
+  {
+    if (element % 2 === 0)
+    {
+      array.splice(index,1);
+    }
+  });
 };
 
 /*------------------------------------------------------------------------
