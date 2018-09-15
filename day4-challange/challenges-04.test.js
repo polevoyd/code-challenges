@@ -126,6 +126,8 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (phrase) => {
   // Solution code here...
+  let rt = phrase.match(/\w+ells\b/g);
+  return rt;
 };
 
 // ------------------------------------------------------------------------------------------------
