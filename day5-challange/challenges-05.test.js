@@ -60,11 +60,16 @@ const totalSumCSV = (str) => {
 /*------------------------------------------------------------------------
 CHALLENGE 4
 
-You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
+You are making a grocery list for ingredients needed in the gruffalo crumble 
+recipe, below. Rather than taking the entire recipe, you only want a list of 
+the item names.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
+Write a function named listFoods that takes in the recipe and returns a new 
+array of the food items without any amount or units. Just the name. For 
+example, '1 cup flour' will return 'flour'.
 
-DO USE slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
+DO USE slice for this function, maybe more than once. The Array.indexOf() 
+method may also be helpful.
 
 DO NOT USE split for this function.
 ------------------------------------------------------------------------*/
@@ -95,14 +100,20 @@ const gruffaloCrumble = {
     'Spread the crisp evenly over the gruffalo mixture',
     'Bake for 12-15 hours',
   ]
-}
+};
 
 
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(function(element, index, array)
+  {
+    let tempArr = element.match(/\s\S/g);
+    let temp = element.slice(element.indexOf(element.match(/\s\S/g)[tempArr.length-1]));
+    result.push(temp);
+  });
   return result;
-}
+};
 
 /*------------------------------------------------------------------------
 CHALLENGE 5
@@ -114,9 +125,32 @@ You may also use other array/string functions.
 
 const splitFoods = (recipe) => {
   let result = [];
+
+  recipe.ingredients.forEach(function(element, index, array)
+  {
+    let arr = element.split(' ');
+
+
+    for (let i = 2; i < arr.length; i++)
+    {
+      let tempString = '';
+      if (i !== arr.length-1)
+      {
+        tempString += arr[i];
+        tempString += ' ';
+      }
+      else
+      {
+        tempString += arr[i];
+      }
+      
+      result.push(tempString);
+    }
+
+  });
   // Solution code here...
   return result;
-}
+};
 
 /*------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,7 +168,7 @@ const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
   return result;
-}
+};
 
 /*------------------------------------------------------------------------
 CHALLENGE 7
