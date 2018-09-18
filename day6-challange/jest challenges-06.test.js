@@ -149,9 +149,11 @@ const hasChildrenEntries = (arr, character) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named houseSize that takes in the array of characters and creates an object for each house containing the name of the house and the number of members.
+Write a function named houseSize that takes in the array of characters and creates an object 
+for each house containing the name of the house and the number of members.
 
-All of these objects should be added to an array named "sizes". Return the "sizes" array from the function.
+All of these objects should be added to an array named "sizes". Return the "sizes" array 
+from the function.
 
 For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ... ].
 ------------------------------------------------------------------------------------------------*/
@@ -159,6 +161,16 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
+  arr.forEach(function(element)
+  {
+    let temp =
+      {
+        house: element.house,
+        members: element.children.length + 2
+      };
+    sizes.push(temp);
+    // console.log(element);
+  });
   return sizes;
 };
 
