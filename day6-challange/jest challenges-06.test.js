@@ -199,7 +199,22 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
+  
   // Solution code here...
+  arr.forEach(function(element)
+  {
+    let membersCount = element.children.length + 1;
+    ((element.spouse) && (!deceasedSpouses.includes(element.spouse))) ? membersCount++ : membersCount += 0;
+
+    let tempObj =
+      {
+        house: element.house,
+        members: membersCount
+      };
+
+    survivors.push(tempObj);
+  });
+  
   return survivors;
 };
 
