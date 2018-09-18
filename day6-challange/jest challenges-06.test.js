@@ -136,7 +136,6 @@ const hasChildrenEntries = (arr, character) => {
   let rt = false;
   Object.entries(arr).forEach(function(element)
   {
-    console.log(element[1]);
     if (element[1].name === character)
     {
       if (element[1].children.length > 0)
@@ -165,13 +164,16 @@ const houseSize = (arr) => {
   // Solution code here...
   arr.forEach(function(element)
   {
-    let temp =
+    let membersCount = element.children.length + 1;
+    (element.spouse) ? membersCount++ : membersCount += 0;
+
+    let tempObj =
       {
         house: element.house,
-        members: element.children.length + 2
+        members: membersCount
       };
-    sizes.push(temp);
-    // console.log(element);
+
+    sizes.push(tempObj);
   });
   return sizes;
 };
