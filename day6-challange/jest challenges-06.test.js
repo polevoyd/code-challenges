@@ -95,7 +95,8 @@ const getHouses = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
+Write a function named hasChildrenValues that uses Object.values to determine if any given 
+character in the data set has children.
 
 This function should take in an array of data and a character name and return a Boolean.
 
@@ -106,19 +107,44 @@ hasChildrenValues(characters, 'Eddard') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-}
+  let rt = false;
+  arr.forEach(function(element)
+  {
+    if (element.name === character)
+    {
+      if (element.children.length > 0)
+      {
+        rt = true;
+      }
+    }
+  });
+  return rt;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its keys.
+Write a function named hasChildrenEntries that is similar to your hasChildrenValues 
+function from challenge 4, but uses the data's entries instead of its keys.
 
 The input and output of this function are the same as the input and output from challenge 4.
 ------------------------------------------------------------------------------------------------*/
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
-}
+  let rt = false;
+  arr.forEach(function(element)
+  {
+    if (element.name === character)
+    {
+      if (element.children.length > 0)
+      {
+        rt = true;
+      }
+    }
+  });
+  return rt;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,7 +160,7 @@ const houseSize = (arr) => {
   const sizes = [];
   // Solution code here...
   return sizes;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -158,7 +184,7 @@ const houseSurvivors = (arr) => {
   const survivors = [];
   // Solution code here...
   return survivors;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
