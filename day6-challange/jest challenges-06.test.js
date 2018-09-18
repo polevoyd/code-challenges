@@ -132,18 +132,17 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
-  let rt = false;
-  arr.forEach(function(element)
+
+  for (let e of Object.entries(arr))
   {
-    if (element.name === character)
+    console.log();
+    if (e[1].name === character)
     {
-      if (element.children.length > 0)
-      {
-        rt = true;
-      }
+      let boolToReturn = false;
+      boolToReturn = (e[1].children > 0) ? true : false;
+      return boolToReturn;
     }
-  });
-  return rt;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
