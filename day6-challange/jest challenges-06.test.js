@@ -35,7 +35,7 @@ let characters = [
   {
     name: 'Jon',
     spouse: 'Lysa',
-    children: ['Robin'],
+    children: [],
     house: 'Arryn'
   },
   {
@@ -63,9 +63,9 @@ let characters = [
     house: 'Stark'
   },
   {
-    name: 'Jon',
+    name: 'Jon S.',
     spouse: null,
-    children: [],
+    children: ['Robin'],
     house: 'Snow'
   }
 ];
@@ -133,16 +133,19 @@ The input and output of this function are the same as the input and output from 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
 
-  for (let e of Object.entries(arr))
+  let rt = false;
+  Object.entries(arr).forEach(function(element)
   {
-    console.log();
-    if (e[1].name === character)
+    console.log(element[1]);
+    if (element[1].name === character)
     {
-      let boolToReturn = false;
-      boolToReturn = (e[1].children > 0) ? true : false;
-      return boolToReturn;
+      if (element[1].children.length > 0)
+      {
+        rt = true;
+      }
     }
-  }
+  });
+  return rt;
 };
 
 /* ------------------------------------------------------------------------------------------------
