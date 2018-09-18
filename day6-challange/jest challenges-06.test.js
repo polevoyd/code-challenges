@@ -33,9 +33,9 @@ let characters = [
     house: 'Stark'
   },
   {
-    name: 'Jon',
+    name: 'Jon S.',
     spouse: 'Lysa',
-    children: [],
+    children: ['Robin'],
     house: 'Arryn'
   },
   {
@@ -63,9 +63,9 @@ let characters = [
     house: 'Stark'
   },
   {
-    name: 'Jon S.',
+    name: 'Jon',
     spouse: null,
-    children: ['Robin'],
+    children: [],
     house: 'Snow'
   }
 ];
@@ -187,7 +187,8 @@ We will assume that Alerie Tyrell is deceased. She missed her daughter's wedding
 
 Write a function named houseSurvivors. You may modify your houseSize function from challenge 6 to use as the basis of this function.
 
-This function should create an object for each house containing the name of the house and the number of members. If the spouse is deceased, do not include him/her in the total number of family members.
+This function should create an object for each house containing the name of the house and the number of members. 
+If the spouse is deceased, do not include him/her in the total number of family members.
 
 All of these objects should be added to an array named "survivors". Return the "survivors" array from the function.
 
