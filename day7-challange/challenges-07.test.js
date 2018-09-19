@@ -130,7 +130,12 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (abilities) => {
-  // Solution code here...
+  let rt = [];
+  Object.values(abilities).map(function(element)
+  {
+    rt.push(element.ability.name);
+  });
+  return rt;
 };
 
 /*------------------------------------------------------------------------------------------------
