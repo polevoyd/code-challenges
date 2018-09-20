@@ -86,15 +86,7 @@ For this function, extend your solution from challenge 4 to only return the name
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------*/
 
-const getStatName = (input, minBaseStat) => {
-  let arr = [];
-  input.map( element =>
-  {
-    if (element.baseStat > minBaseStat)
-      arr.push(element.stat.name);
-  });
-  return arr;
-};
+const getStatName = (input, minBaseStat) => getBaseStatGreaterThan(input, minBaseStat).map( element => element.stat.name);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
