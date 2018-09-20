@@ -99,7 +99,8 @@ const getStatName = (input, minBaseStat) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named getCharactersWithoutChildren that, given the array of characters, below, uses filter to return an array of all characters without children.
+Write a function named getCharactersWithoutChildren that, given the array of characters,
+below, uses filter to return an array of all characters without children.
 ------------------------------------------------------------------------------------------------*/
 
 const characters = [
@@ -145,20 +146,26 @@ const characters = [
   },
 ];
 
-const getCharactersWithoutChildren = (input) => {
-  // Solution code here...
-};
+const getCharactersWithoutChildren = (input) => input.filter( element => !element.children );
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
+Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, 
+then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
 
 For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
 ------------------------------------------------------------------------------------------------*/
 
 const evenOddNumericValues = (input) => {
-  // Solution code here...
+
+  let rt = [];
+  input.filter( element =>
+  {
+    if (Number.isInteger(element))
+      (element % 2 === 0) ? rt.push('even') : rt.push('odd');
+  });
+  return rt;
 };
 
 /* ------------------------------------------------------------------------------------------------
