@@ -27,7 +27,7 @@ const filterStringsWithVowels = (input) => input.filter( element => (element.mat
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named notInFirstArray that, given two arrays as input, uses filter to return an array of all the 
+Write a function named notInFirstArray that, given two arrays as input, uses filter to return an array of all the
 elements in the second array that are not included in the first array.
 
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
@@ -80,13 +80,20 @@ const getBaseStatGreaterThan = (input, minBaseStat) => input.filter( element => 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4. For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
+Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4.
+For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
 
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------*/
 
 const getStatName = (input, minBaseStat) => {
-  
+  let arr = [];
+  input.map( element =>
+  {
+    if (element.baseStat > minBaseStat)
+      arr.push(element.stat.name);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -184,7 +191,7 @@ describe('Testing challenge 2', () => {
 
   test('It should not contain any words that do not contain vowels', () => {
     expect(filterStringsWithVowels(['gregor','hound','xyz'])).not.toContain('xyz');
-  })
+  });
 });
 
 describe('Testing challenge 3', () => {
