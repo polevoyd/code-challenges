@@ -8,9 +8,7 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------*/
 
-const oddValues = (input) => {
-  return input.filter( (element) => element % 2 !== 0);
-};
+const oddValues = (input) => input.filter( (element) => element % 2 !== 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,9 +21,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 ------------------------------------------------------------------------------------------------*/
 
 
-const filterStringsWithVowels = (input) => {
-  return input.filter( element => (element.match(/[aeiou]+/)));
-};
+const filterStringsWithVowels = (input) => input.filter( element => (element.match(/[aeiou]+/)));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,14 +33,13 @@ elements in the second array that are not included in the first array.
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------*/
 
-const notInFirstArray = (forbiddenValues, input) => {
-  return input.filter( element => !forbiddenValues.includes(element));
-};
+const notInFirstArray = (forbiddenValues, input) => input.filter( element => !forbiddenValues.includes(element));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named getBaseStatGreaterThan that, given the snorlaxData, below, and an integer as input, uses filter to return an array containing all stats with a baseStat greater than the integer.
+Write a function named getBaseStatGreaterThan that, given the snorlaxData, below, and an integer as input,
+uses filter to return an array containing all stats with a baseStat greater than the integer.
 
 For example, getBaseStatGreaterThan(snorlaxData.stats, 50) will return an array containing the 'special-defense' and 'special-attack' objects.
 ------------------------------------------------------------------------------------------------*/
@@ -80,9 +75,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (input, minBaseStat) => {
-  // Solution code here...
-};
+const getBaseStatGreaterThan = (input, minBaseStat) => input.filter( element => element.baseStat > minBaseStat );
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -93,7 +86,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------*/
 
 const getStatName = (input, minBaseStat) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
