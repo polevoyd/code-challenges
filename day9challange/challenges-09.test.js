@@ -9,8 +9,13 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------*/
 
 const countNumberOfElements = (input) => {
-//   input.reduce
+
+  return input.reduce( (accumulator, current) =>
+  {
+    return current++; 
+  });
 };
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -62,7 +67,9 @@ const characters = [
 ];
 
 const countNumberOfChildren = (input) => {
-  // Solution code here...
+  return input.reduce( (accumulator, current) =>
+    (current.children) ? accumulator += current.children.length : accumulator += 0
+    , 0);
 };
 
 /*------------------------------------------------------------------------------------------------
