@@ -155,12 +155,14 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------*/
 
-const reversedString = (input) => {
-  return input.split('').reduce( (accumulator, current) =>
-  {
-    return (accumulator.unshift(current)) ? accumulator : accumulator;
-  }, [] ).join('');
-};
+// const reversedString = (input) => {
+//   return input.split('').reduce( (accumulator, current) =>
+//   {
+//     return (accumulator.unshift(current)) ? accumulator : accumulator;
+//   }, [] ).join('');
+// };
+
+const reversedString = (input) => input.split('').reduce((accumulator, current) => (accumulator.unshift(current)) ? accumulator : accumulator, []).join('');
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 7
