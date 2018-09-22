@@ -111,9 +111,9 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStat = (statName, input) => {
-  // Solution code here...
-};
+const extractStat = (statName, input) => input.reduce((accumulator, current) => (current.stat.name === statName) ? current : accumulator, null);
+
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
