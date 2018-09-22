@@ -121,9 +121,7 @@ CHALLENGE 4
 Write a function that, given an array of numbers as input, uses ONE call to filter to calculate the array's average value.
 ------------------------------------------------------------------------------------------------*/
 
-const calculateAverage = (input) => {
-  // Solution code here...
-};
+const calculateAverage = (input) => input.reduce((acc, curr) => acc += curr / input.length, 0);
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 5
