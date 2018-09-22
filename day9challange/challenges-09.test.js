@@ -181,13 +181,15 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-const countPrimeNumbers = (input) => {
+// const countPrimeNumbers = (input) => {
 
-  return input.reduce((accumulator, current) =>
-  {
-    return isPrime(current) ? accumulator+1 : accumulator;
-  }, 0);
-};
+//   return input.reduce((accumulator, current) =>
+//   {
+//     return isPrime(current) ? accumulator+1 : accumulator;
+//   }, 0);
+// };
+
+const countPrimeNumbers = (input) => input.reduce((accumulator, current) => isPrime(current) ? accumulator+1 : accumulator, 0);
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -246,7 +248,12 @@ let starWarsData = [{
 }];
 
 const returnNames = (data) => {
-  // Solution code here...
+  
+  return data.reduce((acc, curr) =>
+  {
+    acc.push(curr.name);
+    return acc;
+  }, []);
 };
 
 /*------------------------------------------------------------------------------------------------
