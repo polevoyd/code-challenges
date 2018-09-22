@@ -133,9 +133,19 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------*/
 
-const extractChildren = input => {
-  // Solution code here...
-};
+// const extractChildren = input => {
+//   return input.filter( element =>
+//   {
+//     return element.name.includes('a');
+//   }).reduce( (accumulator, current) =>
+//   {
+//     return (current.children) ? accumulator.concat(current.children) : accumulator;
+//   }, []);
+// };
+
+const extractChildren = input => input.filter( element => element.name.includes('a')).reduce( (accumulator, current) => (current.children) ? accumulator.concat(current.children) : accumulator, []);
+
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -146,7 +156,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------*/
 
 const reversedString = (input) => {
-  // Solution code here...
+  return input.split('').reduce( (accumulator, current) =>
+  {
+    return (accumulator.unshift(current)) ? accumulator : accumulator;
+  }, [] ).join('');
 };
 
 /*------------------------------------------------------------------------------------------------
