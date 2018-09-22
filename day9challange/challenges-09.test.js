@@ -12,7 +12,7 @@ const countNumberOfElements = (input) => {
 
   return input.reduce( (accumulator, current) =>
   {
-    return current++; 
+    return current++;
   });
 };
 
@@ -182,8 +182,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (input) => {
-  // Solution code here...
-}
+
+  return input.reduce((accumulator, current) =>
+  {
+    return isPrime(current) ? accumulator+1 : accumulator;
+  }, 0);
+};
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -239,7 +243,7 @@ let starWarsData = [{
   eye_color: 'brown',
   birth_year: '19BBY',
   gender: 'female'
-}]
+}];
 
 const returnNames = (data) => {
   // Solution code here...
