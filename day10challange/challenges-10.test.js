@@ -37,7 +37,13 @@ Note: You might need to use the same method more than once.
 ------------------------------------------------------------------------------------------------*/
 
 const totalSum = (input) => {
-  // Solution code here...
+  return input.reduce((acc1, curr1) =>
+  {
+    return acc1.concat(curr1);
+  }, []).reduce((acc2, curr2) =>
+  {
+    return acc2 + curr2;
+  }, 0);
 };
 
 /*------------------------------------------------------------------------------------------------
