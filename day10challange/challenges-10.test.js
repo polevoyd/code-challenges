@@ -58,6 +58,22 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------*/
 
+// const divisibleByFiveTwoToThePower = (input) => {
+//     return input
+//     .map(element =>
+//     {
+//       return element
+//       .filter(subelement =>
+//       {
+//         return ((typeof(subelement) === 'number') && (subelement % 5 === 0) && (subelement >= 5));
+//       })
+//       .map(subelement =>
+//       {
+//         return 2 ** subelement;
+//       })
+//     })
+//   };
+
 const divisibleByFiveTwoToThePower = (input) => {
     let rt = [];
     
