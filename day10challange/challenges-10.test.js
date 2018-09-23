@@ -59,8 +59,24 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------*/
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
-};
+    let rt = [];
+    
+    for (let i of input)
+    {
+      let tempArr = [];
+  
+        for (let k in i)
+        {
+          if ((typeof(i[k]) === 'number') && (i[k] % 5 === 0) && (i[k] >= 5))
+          {
+            i[k] = 2 ** i[k];
+            tempArr.push(i[k])
+          }
+        }
+        rt.push(tempArr);
+    }
+    return rt;
+  };
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -125,8 +141,17 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
-};
+    return data
+    .filter((element) =>
+    {
+      return ((element.gender === 'male') || (element.gender === 'female'));
+    })
+    .reduce((accumulator, current) =>
+    {
+      return accumulator.concat(current.name);
+    }, [])
+    .join(' and ');
+    };
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 5
