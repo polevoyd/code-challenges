@@ -49,7 +49,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------*/
 
 const validateEmail = (email) => {
-  // Solution code here...
+  return email.match(/^[a-zA-Z0-9.]+@{1}[a-zA-Z0-9]+.{1}(.com|.net|.org)/) ? true : false;
 };
 
 /*------------------------------------------------------------------------------------------------
