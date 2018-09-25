@@ -48,9 +48,7 @@ Return either true or false.
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------*/
 
-const validateEmail = (email) => {
-  return email.match(/^[a-zA-Z0-9.]+@{1}[a-zA-Z0-9]+.{1}(.com|.net|.org)/) ? true : false;
-};
+const validateEmail = (email) => email.match(/^[a-zA-Z0-9.]+@{1}[a-zA-Z0-9]+.{1}(.com|.net|.org)/) ? true : false;
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -73,10 +71,7 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------*/
 
-const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
-};
-
+const validatePhoneNumber = (phoneNumber) => phoneNumber.match(/^[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/) ? true : false;
 
 /*------------------------------------------------------------------------------------------------
 TESTS
