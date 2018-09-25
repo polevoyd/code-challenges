@@ -8,8 +8,10 @@ Write a function named validatePin that uses a regular expression pattern to val
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------*/
 
-const validatePin = (pin) => pin.toString().match(/^[0-9]{4}$/) ? true : false;
+const validatePin = (pin) => {
+  return pin.toString().match(/^[0-9]{4}$/) ? true : false;
 
+};
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -20,8 +22,15 @@ For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'
 ------------------------------------------------------------------------------------------------*/
 
 const findTagNames = elements => {
-  // Solution code here...
-}
+    return elements.reduce((accumulator, current) =>
+    {
+      return current.match(/<{1}\/{1}[a-z0-9]*>{1}/g) ? accumulator.concat(current.match(/<{1}\/{1}[a-z0-9]*>{1}/g)) : accumulator;
+    }, []).map(element =>
+    {
+      return element.substr(1, element.length-2);
+    })
+   };
+};
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -128,7 +137,7 @@ describe('Testing challenge 3', () => {
     expect(validateEmail('missing.atsymbol.net')).toBeFalsy();
     expect(validateEmail('looksgood@sofar.comohnowaitthisisbad')).toBeFalsy();
     expect(validateEmail('no.middle.names@foryou.com')).toBeFalsy();
-  })
+  });
 });
 
 describe('Testing challenge 4', () => {
@@ -152,5 +161,5 @@ describe('Testing challenge 4', () => {
     expect(validatePhoneNumber('55555555555')).toBeFalsy();
     expect(validatePhoneNumber('55555555555')).toBeFalsy();
     expect(validatePhoneNumber('55_55_5555')).toBeFalsy();
-  })
+  });
 });
