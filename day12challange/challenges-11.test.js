@@ -8,10 +8,7 @@ Write a function named validatePin that uses a regular expression pattern to val
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------*/
 
-const validatePin = (pin) => {
-  return pin.toString().match(/^[0-9]{4}$/) ? true : false;
-
-};
+const validatePin = (pin) => pin.toString().match(/^[0-9]{4}$/) ? true : false;
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 2
