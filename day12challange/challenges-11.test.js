@@ -19,15 +19,15 @@ For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'
 ------------------------------------------------------------------------------------------------*/
 
 const findTagNames = elements => {
-    return elements.reduce((accumulator, current) =>
-    {
-      return current.match(/<{1}\/{1}[a-z0-9]*>{1}/g) ? accumulator.concat(current.match(/<{1}\/{1}[a-z0-9]*>{1}/g)) : accumulator;
-    }, []).map(element =>
-    {
-      return element.substr(1, element.length-2);
-    })
-   };
+  return elements.reduce((accumulator, current) =>
+  {
+    return current.match(/<{1}\/{1}[a-z0-9]*>{1}/g) ? accumulator.concat(current.match(/<{1}\/{1}[a-z0-9]*>{1}/g)) : accumulator;
+  }, []).map(element =>
+  {
+    return element.substr(1, element.length-2);
+  });
 };
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -68,7 +68,7 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------*/
 
-const validatePhoneNumber = (phoneNumber) => phoneNumber.match(/^[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/) ? true : false;
+const validatePhoneNumber = (phoneNumber) => phoneNumber.match(/^[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/) ? true : false;
 
 /*------------------------------------------------------------------------------------------------
 TESTS
