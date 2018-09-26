@@ -155,7 +155,13 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (meetings) => {
-  // Solution code here...
+
+  const daysArr = ['Monday','Tuesday', 'Wednesday','Thursday','Friday'];
+
+  return meetings.sort((a, b) =>
+  {
+    return daysArr.indexOf(a.dayOfWeek) > daysArr.indexOf(b.dayOfWeek); 
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
