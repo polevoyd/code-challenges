@@ -76,17 +76,18 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 const sortNumbersByLength = (nums) => {
 
 
-    return nums.sort((a, b) =>
-{
+  return nums.sort((a, b) =>
+  {
     return a.toString().length > b.toString().length;
-})
+  });
 
 };
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
 
-Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. (Do not worry about capitalization or first names.)
+Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names.
+(Do not worry about capitalization or first names.)
 ------------------------------------------------------------------------------------------------*/
 
 function Person(firstName, lastName, age) {
@@ -102,7 +103,10 @@ const people = [
 ];
 
 const sortPeople = (people) => {
-  // Solution code here...
+  return people.sort((a, b) =>
+  {
+    return a.lastName > b.lastName;
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
