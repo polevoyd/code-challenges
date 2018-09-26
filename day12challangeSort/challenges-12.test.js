@@ -6,9 +6,7 @@ CHALLENGE 1
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, highest to smallest.
 ------------------------------------------------------------------------------------------------*/
 
-const sortBackwards = (nums) => {
-  return nums.sort((a,b) => b-a);
-};
+const sortBackwards = (nums) => nums.sort((a,b) => b-a);
 
 
 /*------------------------------------------------------------------------------------------------
@@ -21,9 +19,7 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------*/
 
-const alphabetize = (strings) => {
-  // Solution code here...
-};
+const alphabetize = (strings) => strings.sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -32,7 +28,10 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------*/
 
 const sortByLength = (strings) => {
-  // Solution code here...
+  return strings.sort((a, b) =>
+  {
+    return a.length - b.length;
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -219,7 +218,7 @@ describe('Testing challenge 6', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
-    expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]))
+    expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
   });
 });
 
