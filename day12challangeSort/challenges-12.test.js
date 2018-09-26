@@ -188,7 +188,7 @@ const sortSchedule = (meetings) => {
       // console.log(a);
       return (Number.parseInt(a.end)  - Number.parseInt(a.start)) > (Number.parseInt(b.end)  - Number.parseInt(b.start));
     } 
-  })
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
