@@ -6,7 +6,7 @@ CHALLENGE 1
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, highest to smallest.
 ------------------------------------------------------------------------------------------------*/
 
-const sortBackwards = (nums) => nums.sort((a,b) => b-a);
+const sortBackwards = (nums) => nums.sort((a,b) => b > a);
 
 
 /*------------------------------------------------------------------------------------------------
@@ -27,12 +27,8 @@ CHALLENGE 3
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------*/
 
-const sortByLength = (strings) => {
-  return strings.sort((a, b) =>
-  {
-    return a.length - b.length;
-  });
-};
+const sortByLength = (strings) => strings.sort((a, b) => a.length - b.length);
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -118,7 +114,22 @@ If two people share the same last name, alphabetize on their first name. If two 
 ------------------------------------------------------------------------------------------------*/
 
 const sortPeopleBetter = (people) => {
-  // Solution code here...
+  return people.sort((a, b) =>
+  {
+
+    if ((a.lastName === b.lastName) && (a.firstName === b.firstName))
+    {
+      return a.age > b.age;
+    }
+    else if (a.lastName === b.lastName)
+    {
+      return (a.firstName > b.firstName)
+    } 
+    else
+    {
+      return (a.lastName > b.lastName)
+    }
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
