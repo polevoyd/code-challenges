@@ -175,7 +175,20 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------*/
 
 const sortSchedule = (meetings) => {
-  // Solution code here...
+    
+  const daysArr = ['Monday','Tuesday', 'Wednesday','Thursday','Friday'];
+
+  return meetings.sort((a, b) =>
+  {
+    if ((daysArr.indexOf(a.dayOfWeek) === daysArr.indexOf(b.dayOfWeek)) && (a.start === b.start))
+    {
+      return (a.end-a.start) > (b.end-b.start);
+    }
+    else
+    {
+      return a.start > b.start;
+    }
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
