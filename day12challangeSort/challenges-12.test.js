@@ -180,15 +180,15 @@ const sortSchedule = (meetings) => {
 
   return meetings.sort((a, b) =>
   {
-    if ((daysArr.indexOf(a.dayOfWeek) === daysArr.indexOf(b.dayOfWeek)) && (a.start === b.start))
+    return daysArr.indexOf(a.dayOfWeek) > daysArr.indexOf(b.dayOfWeek);
+  }).sort((a, b) =>
+  {
+    if ((daysArr.indexOf(a.dayOfWeek) === daysArr.indexOf(b.dayOfWeek)))
     {
-      return (a.end-a.start) > (b.end-b.start);
-    }
-    else
-    {
-      return a.start > b.start;
-    }
-  });
+      // console.log(a);
+      return (Number.parseInt(a.end)  - Number.parseInt(a.start)) > (Number.parseInt(b.end)  - Number.parseInt(b.start));
+    } 
+  })
 };
 
 /*------------------------------------------------------------------------------------------------
