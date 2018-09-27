@@ -161,8 +161,10 @@ const unenrollBrook = (roster) => {
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (eventStrings) => {
-  
-    
+
+
+
+
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -174,7 +176,10 @@ const sortByDay = (eventStrings) => {
 // ------------------------------------------------------------------------------------------------
 
 const characterByIndex = (strs) => {
-  // Solution code here...
+  return strs.map((element, index, array) =>
+  {
+    return element[index];
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
