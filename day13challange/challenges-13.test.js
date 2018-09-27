@@ -39,7 +39,10 @@ const findHappiness = (strs) => {
 // ------------------------------------------------------------------------------------------------
 
 const standardizePhoneNumbers = (phoneNumbers) => {
-  // Solution code here...
+  return phoneNumbers.map((element) =>
+  {
+    return element.substring(1,4).concat(element.substring(6,9).concat(element.substring(10,14)));
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
