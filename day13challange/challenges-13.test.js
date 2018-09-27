@@ -124,7 +124,13 @@ const allAnything = (strs, target) => {
 const unenrollBrook = (roster) => {
 
 
-    
+  return roster.map((element) =>
+  {
+    return element.filter((element2) =>
+    {
+      return !element2.includes('Brook');
+    });
+  });
 
 };
 
