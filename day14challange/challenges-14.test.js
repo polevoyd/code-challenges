@@ -133,8 +133,9 @@ const sortBy = (property, objs) => objs.sort((a, b) => a[property] > b[property]
 // ];
 // ------------------------------------------------------------------------------------------------
 
-const detectTicTacToeWin = (board) => {
-  // Solution code here...
+const detectTicTacToeWin = (board) =>
+{
+
 };
 
 // ------------------------------------------------------------------------------------------------
