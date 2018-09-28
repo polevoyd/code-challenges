@@ -86,7 +86,14 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (data) => {
-  // Solution code here...
+  // "Lando Calrisian - Boba Fett - Princess Amygdala".
+
+  let a = data.reduce((accumulator, element) =>
+  {
+    return (element.mass > 77) ? accumulator + element.name + ' - ' : accumulator;
+  }, '');
+
+  return a.slice(0, a.length-3);
 };
 
 /*------------------------------------------------------------------------------------------------
