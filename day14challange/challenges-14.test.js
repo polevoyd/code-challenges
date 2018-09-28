@@ -109,9 +109,7 @@ Here is an example of the input:
 Which could be sorted by name or price.
 ------------------------------------------------------------------------------------------------*/
 
-const sortBy = (property, objs) => {
-  // Solution code here...
-};
+const sortBy = (property, objs) => objs.sort((a, b) => a[property] > b[property]);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -149,8 +147,10 @@ const detectTicTacToeWin = (board) => {
 // https://secure.com is secure
 // https:/missingslash.org returns false because url malformed
 // ------------------------------------------------------------------------------------------------
-const isSecure = (url) => {
-// Solution code here...
+
+const isSecure = (url) => 
+{
+  return (url.substr(0,8) === 'https://') ? true : false;
 };
 
 // ------------------------------------------------------------------------------------------------
